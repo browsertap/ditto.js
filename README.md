@@ -9,3 +9,4 @@ Websites for cross-browser, cross-mobile compatibility.
 - Synchronizes CSS changes
 - Synchronizes navigation
 - Synchronizes mouse & keyboard interactions
+- Syhcnroizes window size
