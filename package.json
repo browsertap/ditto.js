@@ -1,0 +1,16 @@
+{
+  "name": "ditto",
+  "version": "0.0.0",
+  "description": "Ditto is a development utility that synchronizes changes across any browser you have running. It's perfect for testing Websites for cross-browser, cross-mobile compatibility.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/browsertap/ditto.js"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
