@@ -10,3 +10,4 @@ Websites for cross-browser, cross-mobile compatibility.
 - Synchronizes navigation
 - Synchronizes mouse & keyboard interactions
 - Syhcnroizes window size
+- Synchronize CSS & DOM changes in Firebug (Firefox, Chrome), Web Inspector (Chrome, Safari), and Dragonfly (Opera).
