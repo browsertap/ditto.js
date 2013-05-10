@@ -11,3 +11,4 @@ Websites for cross-browser, cross-mobile compatibility.
 - Synchronizes mouse & keyboard interactions
 - Syhcnroizes window size
 - Synchronize CSS & DOM changes in Firebug (Firefox, Chrome), Web Inspector (Chrome, Safari), and Dragonfly (Opera).
+- Record user interactions, and replay them from a server (similar to selenium).
