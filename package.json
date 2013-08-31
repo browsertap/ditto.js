@@ -3,20 +3,29 @@
   "version": "0.0.0",
   "description": "Ditto is a development utility that synchronizes changes across any browser you have running. It's perfect for testing Websites for cross-browser, cross-mobile compatibility.",
   "main": "./lib/index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/browsertap/ditto.js"
-  },
-  "dependencies": {
-    "outcome": "0.0.x",
-    "plugin": "0.2.x",
-    "domready": "0.2.x",
-    "step": "0.0.x"
+    "url": "git://github.com/browsertap/ditto.js.git"
   },
   "author": "",
   "license": "BSD",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "gitHead": "fc3f055355caf1f5f02c4b5db91b683343154043",
+  "devDependencies": {
+    "browserify": "~2.29.0",
+    "coffee-script": "~1.6.3"
+  },
+  "dependencies": {
+    "sockjs": "~0.3.7",
+    "express": "~3.3.7",
+    "bindable": "~0.4.0",
+    "fasten": "0.0.6",
+    "type-component": "0.0.1"
+  }
 }
