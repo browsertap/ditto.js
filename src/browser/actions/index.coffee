@@ -1,27 +1,8 @@
 fasten = require("fasten")()
 type   = require "type-component"
 
-events = [
 
-#mouse
-"mouseDown",
-"mouseUp",
-"click"
-
-#keyboard
-"keyDown",
-"keyUp",
-"type",
-"submit",
-"backspace"
-
-#other
-"wait",
-"visit",
-"speed"
-]
-
-actions = fasten.add("actions", {
+fasten.add("actions", {
   "click": {
     call: (path, next) ->
       $.xpath(path).click()
@@ -59,4 +40,8 @@ actions = fasten.add("actions", {
 })
 
 
-module.exports = fasten
+module.exports = fasten.wrap({
+  and: (fn) -> 
+    fn()
+    @
+}, "actions")
