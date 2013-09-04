@@ -22,7 +22,7 @@ client.copy().filter((event, data) ->
 client.copy().to(remote).to(ditto.actions)
 
 
-ditto.actions.click("path").
+ditto.actions.type("input", "blah").click("submit")
 
 
 

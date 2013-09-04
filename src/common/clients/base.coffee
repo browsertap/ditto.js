@@ -1,7 +1,7 @@
 events      = require "events"
-CopyEmitter = require "./copy"
+CopyClient  = require "./copy"
 
-_id = Number Date.now()
+_id = 
 
 class BaseClient
 
@@ -9,7 +9,7 @@ class BaseClient
   ###
 
   constructor: () ->
-    @_id = _id++
+    @_id = Number(Date.now()) + "_" + Math.round(Math.random() * 999999999)
     @_observers = []
 
   ###
@@ -27,8 +27,17 @@ class BaseClient
   ###
 
   dispatch: (data) -> 
+
+    unless data.origin
+      data.origin = @_id
+
     for observer in @_observers
       observer data
+
+  ###
+  ###
+
+  handle: (data) =>
 
   ###
   ###
@@ -49,4 +58,4 @@ class BaseClient
     }
   
 
-module.exports = BaseEmitter
+module.exports = BaseClient

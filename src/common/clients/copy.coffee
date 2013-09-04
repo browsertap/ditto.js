@@ -18,7 +18,7 @@ class CopyClient
   to: (client) ->
     @_observer = @_client.observe (data) =>
       return unless @_filter data
-      client.dispatch data
+      client.handle data
     @
 
   ###
@@ -27,7 +27,7 @@ class CopyClient
   from: (client) ->
     @_observer = client.observe (data) =>
       return unless @_filter data
-      @_client.dispatch data
+      @_client.handle data
     @
 
   ###
@@ -37,4 +37,4 @@ class CopyClient
     @_observer?.dispose()
     @_observer = undefined
 
-module.exports = CopyEmitter
+module.exports = CopyClient

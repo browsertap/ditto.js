@@ -5,18 +5,18 @@ type   = require "type-component"
 fasten.add("actions", {
   "click": {
     call: (path, next) ->
-      $.xpath(path).click()
-      next()
+      $(document).xpath(path).click()
+      next null, @
   },
   "type": {
-    call: (path, next) ->
-      ($el = $.xpath(path)).val(path)
+    call: (path, value, next) ->
+      ($el = $(document).xpath(path)).val(value)
       $el.trigger "keydown"
       $el.trigger "keyup"
-      next()
+      next null, @
   },
   "next": {
-    call: (fn, next) -> fn next
+    call: (fn, next) -> fn () => next null, @
   },
   "wait": {
     call: (fn, next) =>
@@ -24,9 +24,9 @@ fasten.add("actions", {
       if type(fn) is "number"
         return setTimeout next, fn
 
-      check = () ->
+      check = () =>
         if fn()
-          next()
+          next null, @
 
         setTimeout 500, next
 
@@ -36,12 +36,25 @@ fasten.add("actions", {
     call: (location, next) =>
       window.location = location
       next()
+  },
+  "dispatch": {
+    call: (data, next) =>
+      next null, @
+  },
+  "handle": {
+    call: (data, next) =>
+      next null, @
+  }
+  "find": {
+    call: (path, next) ->
+      console.log $(document).xpath(path)
+      next null, @
   }
 })
 
 
-module.exports = fasten.wrap({
+module.exports = fasten.wrap("actions", {
   and: (fn) -> 
     fn()
     @
-}, "actions")
+})
