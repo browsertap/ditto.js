@@ -1,14 +1,8 @@
 {
   "name": "ditto",
-  "version": "0.0.0",
-  "description": "Ditto is a development utility that synchronizes changes across any browser you have running. It's perfect for testing Websites for cross-browser, cross-mobile compatibility.",
-  "main": "./lib/server/index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "bin": {
-    "dto": "./bin/dto"
-  },
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,20 +11,22 @@
     "url": "git://github.com/browsertap/ditto.js.git"
   },
   "author": "",
-  "license": "BSD",
-  "readmeFilename": "README.md",
-  "gitHead": "fc3f055355caf1f5f02c4b5db91b683343154043",
-  "devDependencies": {
-    "browserify": "~2.29.0",
-    "coffee-script": "~1.6.3"
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/browsertap/ditto.js/issues"
   },
+  "browser": "./lib/browser.js",
   "dependencies": {
-    "sockjs": "~0.3.7",
-    "express": "~3.3.8",
-    "bindable": "~0.4.0",
-    "fasten": "0.0.6",
-    "type-component": "0.0.1",
-    "browserify-middleware": "~1.17.2",
-    "xpgen": "0.0.3"
+    "protoclass": "0.0.5",
+    "domready": "~0.2.13",
+    "underscore": "~1.5.2",
+    "shoe": "0.0.15",
+    "bindable": "~0.5.24",
+    "dnode": "~1.2.0",
+    "hasher": "~1.2.0",
+    "optimist": "~0.6.1",
+    "gaze": "~0.5.0",
+    "browserify": "~3.24.13",
+    "async": "~0.2.10"
   }
 }

@@ -1,14 +1,33 @@
 ### Summary
 
-Ditto is a development utility that synchronizes changes across any browser you have running. It's perfect for testing
-Websites for cross-browser, cross-mobile compatibility. 
+Ditto is a development utility that synchronizes changes across any browser you have running. It's perfect for testing Websites for cross-browser, cross-mobile compatibility.
 
 ### Features
 
-- Synchronizes scrolling
-- Synchronizes CSS changes
-- Synchronizes navigation
-- Synchronizes mouse & keyboard interactions
-- Syhcnroizes window size
-- Synchronize CSS & DOM changes in Firebug (Firefox, Chrome), Web Inspector (Chrome, Safari), and Dragonfly (Opera).
-- Record user interactions, and replay them from a server (similar to selenium).
+- synchronize CSS / JS / HTML changes
+- synchronize navigation
+- synchronize mouse & keyboard interactions
+- syhcnronize CSS & DOM changes in Chrome
+
+### Express Usage
+
+```javascript
+var express = require("express"),
+ditto       = require("ditto"),
+app         = express();
+
+// register the express middleware
+app.use(ditto({
+  watch: {
+    path: "/path/to/files/to/watch"
+  }
+}).adapters.connect);
+
+app.listen(8080);
+```
+
+In your HTML app, insert this tag in your header:
+
+```html
+<script type="text/javascript" src="/ditto/hotswap.js"></script>
+```
