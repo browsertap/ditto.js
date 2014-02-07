@@ -1,2 +1,10 @@
 #!/usr/bin/env node
-var optimist = require("optimist");
+var argv = require("minimist")(process.argv.slice(2)),
+ditto = require("..");
+
+ditto({
+  watch: argv.watch
+}).mitm({
+  proxy: argv._[0],
+  port: Number(argv.port || 8080)
+});
