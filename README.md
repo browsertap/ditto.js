@@ -31,3 +31,17 @@ In your HTML app, insert this tag in your header:
 ```html
 <script type="text/javascript" src="/ditto/hotswap.js"></script>
 ```
+
+### Command Line Usage
+
+You can also setup ditto to automatically proxy, and inject itself into any website simply by running:
+
+```
+ditto-proxy [proxy] --watch=[path] --port=[proxy-port]
+```
+
+This assumes you have ditto installed globally:
+
+```
+npm install ditto -g
+```

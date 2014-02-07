@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "dittojs": "./bin/ditto"
+    "ditto-proxy": "./bin/ditto"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
     "gaze": "~0.5.0",
     "browserify": "~3.24.13",
     "async": "~0.2.10",
-    "http-mitm-proxy": "git+ssh://git@github.com:joeferner/node-http-mitm-proxy.git",
     "minimist": "0.0.5",
     "http-proxy": "~1.0.2",
     "connect": "~2.12.0",
