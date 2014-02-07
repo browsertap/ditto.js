@@ -6,6 +6,8 @@ Ditto is a development utility that synchronizes changes across any browser you 
 
 - synchronize CSS / JS / HTML changes
 - synchronize navigation
+- synchronize console logs across all browsers - see console logs in terminal window
+- see any uncaught exceptions in ditto terminal window
 - synchronize mouse & keyboard interactions
 - syhcnronize CSS & DOM changes in Chrome
 
