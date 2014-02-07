@@ -2,9 +2,12 @@
 var argv = require("minimist")(process.argv.slice(2)),
 ditto = require("..");
 
+var port = Number(argv.port || 8080);
+
 ditto({
-  watch: argv.watch
+  watch: argv.watch,
+  verbose: argv.verbose
 }).mitm({
   proxy: argv._[0],
-  port: Number(argv.port || 8080)
+  port: port
 });
